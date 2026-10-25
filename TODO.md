@@ -40,3 +40,13 @@
 ## 7. Testes e limitações
 - [x] Executar build, checagem TypeScript, teste de resposta/rotas e inspeção visual desktop/mobile; corrigir erros encontrados e relatar o que foi efetivamente verificado.
 - [x] Informar claramente limitações restantes. Não afirmar site publicado, envio de formulário ou integração funcional sem implementação e verificação.
+
+
+## 8. Adaptação visual com base nas capturas fornecidas
+- [x] Preservar a identidade e o conteúdo da VISORA, aproximando o cabeçalho marinho com navegação central e CTA ciano, o hero dividido com selo, título expressivo à esquerda e ilustração de presença local à direita em grade/orbitas, a credibilidade em fundo escuro com três cartões horizontais e os serviços em cartões escuros num arranjo de três colunas com dois cartões na segunda linha.
+- [x] Adaptar o visual para tablet/celular com conteúdo empilhado, texto legível, controles usáveis, sem rolagem horizontal e sem substituir demonstrações conceituais por clientes, estrelas ou avaliações que aparentem reais.
+- [x] Manter as demais seções, conteúdos obrigatórios, interações de contato, formulário transparente e limites de dados já definidos.
+
+
+### Evidência desta revisão visual
+As capturas foram conferidas em desktop (1366×768 e 1440×1000), tablet (768×1024) e celular (390×844), inclusive a página completa. `pnpm typecheck` e `pnpm build` passaram; o Preview confirmou três cartões de credibilidade, cinco serviços e nenhuma imagem quebrada. No viewport de 1280 px, o DOM reportou largura de documento de 1265 px.

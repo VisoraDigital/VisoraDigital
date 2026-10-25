@@ -3,19 +3,15 @@ import {
   ArrowDownRight,
   ArrowRight,
   ArrowUpRight,
-  BadgeCheck,
   Check,
   ChevronDown,
-  Compass,
   ExternalLink,
   Globe2,
   Layers3,
-  MapPin,
   Menu,
   MessageCircle,
   ScanLine,
   Search,
-  ShieldCheck,
   ShoppingBag,
   Sparkles,
   Store,
@@ -258,8 +254,8 @@ function Hero() {
       <div className="hero__glow" aria-hidden="true" />
       <div className="container hero__grid">
         <div className="hero__copy">
-          <div className="eyebrow"><span className="eyebrow__line" /> ESTRATÉGIA DIGITAL PARA NEGÓCIOS LOCAIS</div>
-          <h1>Seu negócio merece <span>ser encontrado.</span></h1>
+          <div className="hero__badge"><span className="hero__badge-dot" /> Mais visibilidade para o seu negócio</div>
+          <h1>Seu negócio merece ser <span>encontrado.</span></h1>
           <p className="hero__lead">Fortalecemos sua presença digital com estratégias no Google, avaliações por QR Code, sites profissionais e lojas virtuais.</p>
           <p className="hero__support">Mais clareza para sua marca. Mais facilidade para seus clientes encontrarem você.</p>
           <div className="hero__actions">
@@ -272,24 +268,27 @@ function Hero() {
         </div>
 
         <div className="hero-visual" aria-label="Demonstração conceitual de presença digital">
-          <img className="hero-visual__art" src="/manus-storage/async-images/4wcFmVZVWAuw0YygGOf2IK/image-1.webp" alt="Arte abstrata com linhas orbitais cianas sobre fundo azul-marinho" />
+          <div className="hero-visual__grid" aria-hidden="true" />
           <div className="hero-visual__orbit hero-visual__orbit--one" aria-hidden="true" />
           <div className="hero-visual__orbit hero-visual__orbit--two" aria-hidden="true" />
-          <div className="signal-tag signal-tag--top"><span className="signal-tag__pulse" /> PRESENÇA DIGITAL</div>
-          <div className="presence-card">
-            <div className="presence-card__top"><span className="window-dots"><i /><i /><i /></span><span>visora.digital / negócios</span><span className="presence-card__secure"><ShieldCheck size={13} /> online</span></div>
-            <div className="presence-card__body">
-              <div className="presence-card__eyebrow"><MapPin size={13} /> PESQUISA LOCAL</div>
-              <h2>Encontre uma presença feita para o seu negócio.</h2>
-              <p>Informação clara. Uma marca bem apresentada. Um próximo passo fácil.</p>
-              <div className="presence-card__actions"><span>Conhecer soluções <ArrowUpRight size={13} /></span><div className="presence-card__avatars" aria-hidden="true"><i>V</i><i>G</i><i>+</i></div></div>
-              <div className="presence-card__rule"><span /></div>
-              <div className="presence-card__footer"><span><span className="tiny-dot" /> Perfil atualizado</span><span>Seu próximo passo começa aqui</span></div>
-            </div>
+          <div className="local-profile-card">
+            <div className="local-profile-card__search"><Search size={13} /><span>negócios perto de mim</span></div>
+            <div className="local-profile-card__image" aria-hidden="true" />
+            <strong>Seu Negócio</strong>
+            <span className="local-profile-card__type">Perfil da empresa · demonstração</span>
+            <div className="local-profile-card__actions"><span>Rotas</span><span>Ligar</span><span>Site</span></div>
           </div>
-          <div className="floating-chip floating-chip--one"><span className="floating-chip__icon"><Search size={15} /></span><span><small>MAIS DESCOBERTA</small><strong>Presença local</strong></span></div>
-          <div className="floating-chip floating-chip--two"><span className="floating-chip__icon"><MessageCircle size={15} /></span><span><small>CONTATO MAIS FÁCIL</small><strong>Conexão direta</strong></span></div>
-          <div className="hero-visual__caption"><Sparkles size={12} /> Demonstração conceitual</div>
+          <div className="hero-visual__brandmark" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><path d="M17 14 31 49 48 14" /><path className="hero-visual__brand-orbit" d="M9 39c11-16 29-22 47-15" /></svg>
+          </div>
+          <div className="hero-website-card" aria-hidden="true">
+            <div className="hero-website-card__top"><i /><i /><i /><span>presença digital</span></div>
+            <div className="hero-website-card__content"><span /><span /><span /><i /></div>
+          </div>
+          <div className="hero-visual__label"><span className="signal-tag__pulse" /> VISIBILIDADE LOCAL</div>
+          <div className="hero-visual__caption">
+            <Sparkles size={12} /> Demonstração conceitual
+          </div>
         </div>
       </div>
       <div className="container hero__bottom"><span>GOOGLE &amp; BUSCA LOCAL</span><i /><span>EXPERIÊNCIA DIGITAL</span><i /><span>CONEXÃO COM CLIENTES</span><span className="hero__scroll">ROLE PARA DESCOBRIR <ArrowDownRight size={13} /></span></div>
@@ -299,15 +298,15 @@ function Hero() {
 
 function Credibility() {
   const pillars = [
-    { icon: Compass, title: 'Visibilidade', text: 'Facilitamos a descoberta do seu negócio nos canais digitais certos.' },
-    { icon: BadgeCheck, title: 'Confiança', text: 'Ajudamos a apresentar uma imagem profissional e facilitar o acesso às avaliações.' },
-    { icon: ArrowUpRight, title: 'Conversão', text: 'Tornamos o próximo passo mais simples: conhecer, conversar e solicitar.' },
+    { title: 'Visibilidade', text: 'Informações claras e atualizadas.' },
+    { title: 'Confiança', text: 'Imagem profissional e consistente.' },
+    { title: 'Conversão', text: 'Contato fácil para o cliente.' },
   ];
   return (
     <section className="credibility section-anchor" id="credibilidade">
       <div className="container credibility__layout">
-        <div className="credibility__intro"><span className="section-kicker section-kicker--dark">UMA BASE MAIS FORTE</span><h2>Uma presença digital mais profissional <em>começa aqui.</em></h2><p>Ajudamos empresas a melhorar a forma como são encontradas, apresentadas e avaliadas na internet — com soluções que fazem sentido para cada negócio.</p><a className="text-link text-link--dark" href="#processo">Veja como trabalhamos <ArrowRight size={15} /></a></div>
-        <div className="pillar-list">{pillars.map(({ icon: Icon, title, text }, index) => <article className="pillar" key={title}><span className="pillar__number">0{index + 1}</span><span className="pillar__icon"><Icon size={20} strokeWidth={1.7} /></span><div><h3>{title}</h3><p>{text}</p></div><ArrowUpRight className="pillar__arrow" size={16} /></article>)}</div>
+        <div className="credibility__intro"><span className="section-kicker section-kicker--dark">CREDIBILIDADE</span><h2>Uma presença digital mais profissional <em>começa aqui.</em></h2><p>Quando alguém procura pelo seu serviço, as primeiras impressões acontecem online. Organizamos as informações do seu negócio para que ele seja encontrado, compreendido e escolhido com mais confiança.</p></div>
+        <div className="pillar-list">{pillars.map(({ title, text }) => <article className="pillar" key={title}><span className="pillar__icon"><Check size={16} strokeWidth={2} /></span><div><h3>{text}</h3><p>{title}</p></div></article>)}</div>
       </div>
     </section>
   );
@@ -317,12 +316,12 @@ function Services() {
   return (
     <section className="services section-anchor" id="servicos">
       <div className="container">
-        <div className="section-heading section-heading--split"><div><span className="section-kicker">SOLUÇÕES VISORA</span><h2>Presença digital que <em>trabalha junto.</em></h2></div><p>Do primeiro clique à conversa com um novo cliente, cuidamos dos pontos que aproximam seu negócio das pessoas.</p></div>
+        <div className="section-heading section-heading--services"><span className="section-kicker">SERVIÇOS</span><h2>Soluções para cada etapa da sua presença online.</h2></div>
         <div className="service-grid">{serviceItems.map(({ number, icon: Icon, title, intro, bullets, cta }) => (
           <article className="service-card" key={number}>
-            <div className="service-card__top"><span className="service-card__icon"><Icon size={21} strokeWidth={1.6} /></span><span className="service-card__number">{number}</span></div>
+            <div className="service-card__top"><span className="service-card__icon"><Icon size={28} strokeWidth={1.7} /></span></div>
             <h3>{title}</h3><p>{intro}</p>
-            <details className="service-card__details"><summary>Saiba mais <ChevronDown size={15} /></summary><div className="service-card__expanded"><ul>{bullets.map((item) => <li key={item}><Check size={14} />{item}</li>)}</ul><WhatsappLink className="text-link" message={`Olá! Gostaria de saber mais sobre ${title} com a VISORA DIGITAL.`}>{cta} <ArrowUpRight size={15} /></WhatsappLink></div></details>
+            <details className="service-card__details"><summary>Saiba mais <ArrowRight size={15} /></summary><div className="service-card__expanded"><ul>{bullets.map((item) => <li key={item}><Check size={14} />{item}</li>)}</ul><WhatsappLink className="text-link" message={`Olá! Gostaria de saber mais sobre ${title} com a VISORA DIGITAL.`}>{cta} <ArrowUpRight size={15} /></WhatsappLink></div></details>
             <span className="service-card__line" />
           </article>
         ))}</div>

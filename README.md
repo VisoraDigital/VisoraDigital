@@ -38,9 +38,7 @@ O aviso “Privacidade e tratamento de dados” informa essa operação. A VISOR
 
 As interfaces de Perfil da Empresa no Google, QR Code, site, portfólio e loja são mockups criados no código e identificados como demonstrações conceituais. O QR mostrado é ilustrativo e não funcional. Um QR final deve usar o endereço fornecido pelo cliente e ser validado antes da entrega. Nenhuma integração de pagamento, entrega, avaliações ou conta Google está ligada a este site.
 
-A arte de fundo do hero usa uma URL de mídia gerenciada do projeto. Se a geração ainda estiver sendo processada, o armazenamento substitui o placeholder quando ela terminar. O favicon vetorial e a imagem de compartilhamento usam a identidade visual criada para o site.
-
-Em hospedagem fora da Manus, copie a arte finalizada para a pasta `public/` e atualize a referência de imagem em `src/App.tsx`; o caminho `/manus-storage/` pertence ao serviço de mídia do projeto.
+O hero usa uma ilustração original em CSS, com grade, órbitas e interfaces conceituais; não depende de arquivo de imagem nem de armazenamento externo. O favicon vetorial e a imagem de compartilhamento usam a identidade visual criada para o site.
 
 ## Domínio e hospedagem
 
@@ -63,6 +61,6 @@ Não há dados de domínio, WhatsApp, e-mail, endereço físico, CNPJ, preço, a
 - `pnpm build`: aprovado; Vite gerou `dist/` e o script pré-renderizou a página com os dados estruturados JSON-LD.
 - Servidor de desenvolvimento na porta 3000: `/`, `/manus-routes.json`, `/robots.txt` e `/sitemap.xml` responderam HTTP 200; o manifesto retornou JSON válido com a rota `/`.
 - HTML de produção: conteúdo das cinco áreas de serviço, incluindo experiência responsiva e gestão de produtos/pedidos na loja virtual, H1, metadados Open Graph/Twitter e dados estruturados foram encontrados; canonical, `og:url` e URLs no sitemap foram omitidos enquanto não há domínio.
-- Revisão visual feita em desktop (1440×1000), tablet (768×1024) e celular (390×844), além de capturas completas. A medição no preview retornou `scrollWidth` 1265 para viewport 1280, sem rolagem horizontal.
+- A composição baseada nas capturas do cliente foi inspecionada em desktop (1366×768 e 1440×1000), tablet (768×1024) e celular (390×844), incluindo a página completa. No Preview, o DOM reportou `scrollWidth` 1265 para viewport 1280, sem rolagem horizontal; foram encontrados três cartões de credibilidade, cinco serviços e nenhuma imagem quebrada.
 - Interação: o painel “Saiba mais” abriu. Campos obrigatórios bloquearam o formulário vazio. Com dados sintéticos de teste, o site mostrou a alternativa do Instagram por não haver WhatsApp configurado; nenhum dado real foi usado ou enviado.
 - Não foi verificado envio de WhatsApp com um número real, integração externa, DNS ou publicação pública; esses itens dependem de dados e serviços do responsável.
