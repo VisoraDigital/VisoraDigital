@@ -165,14 +165,22 @@ const qrPattern = [
   '11111110101011111',
 ];
 
+function BrandSymbol({ className = 'brand__symbol', decorative = false }: { className?: string; decorative?: boolean }) {
+  return (
+    <svg className={className} viewBox="0 0 48 44" fill="none" role={decorative ? undefined : 'img'} aria-label={decorative ? undefined : 'Símbolo V orbital'} aria-hidden={decorative || undefined}>
+      <path className="brand__orbit brand__orbit--primary" d="M4.5 25.8c7.8-10.7 21.6-16 36.7-10.2" />
+      <path className="brand__orbit brand__orbit--secondary" d="M7.5 29.5c8.2 5.7 20.5 6.2 31.1.4" />
+      <path className="brand__glyph" d="M10.8 8.5 23.2 34 38.5 8.5" />
+      <circle className="brand__node" cx="41.2" cy="15.7" r="1.8" />
+      <circle className="brand__node brand__node--satellite" cx="5.8" cy="24.1" r=".9" />
+    </svg>
+  );
+}
+
 function BrandMark({ compact = false }: { compact?: boolean }) {
   return (
     <a className={`brand${compact ? ' brand--compact' : ''}`} href="#inicio" aria-label="VISORA DIGITAL — início" tabIndex={compact ? -1 : undefined}>
-      <svg className="brand__symbol" viewBox="0 0 44 44" role="img" aria-label="Símbolo V orbital">
-        <path d="M8 9 21.8 34 36 9" fill="none" stroke="currentColor" strokeWidth="3.1" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M4.5 24.8c7.7-9 21.9-12.6 34.8-8.4" fill="none" stroke="currentColor" strokeWidth="1.35" strokeLinecap="round" opacity=".72" />
-        <circle cx="37.1" cy="16.4" r="2" fill="currentColor" />
-      </svg>
+      <BrandSymbol decorative />
       <span className="brand__wordmark"><strong>VISORA</strong><small>DIGITAL</small></span>
     </a>
   );
@@ -279,7 +287,7 @@ function Hero() {
             <div className="local-profile-card__actions"><span>Rotas</span><span>Ligar</span><span>Site</span></div>
           </div>
           <div className="hero-visual__brandmark" aria-hidden="true">
-            <svg viewBox="0 0 64 64"><path d="M17 14 31 49 48 14" /><path className="hero-visual__brand-orbit" d="M9 39c11-16 29-22 47-15" /></svg>
+            <BrandSymbol className="brand__symbol hero-visual__brand-symbol" decorative />
           </div>
           <div className="hero-website-card" aria-hidden="true">
             <div className="hero-website-card__top"><i /><i /><i /><span>presença digital</span></div>

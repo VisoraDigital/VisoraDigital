@@ -50,3 +50,11 @@
 
 ### Evidência desta revisão visual
 As capturas foram conferidas em desktop (1366×768 e 1440×1000), tablet (768×1024) e celular (390×844), inclusive a página completa. `pnpm typecheck` e `pnpm build` passaram; o Preview confirmou três cartões de credibilidade, cinco serviços e nenhuma imagem quebrada. No viewport de 1280 px, o DOM reportou largura de documento de 1265 px.
+
+
+## 9. Refinamento da logo
+- [x] Atualizar somente a assinatura VISORA — símbolo V orbital, wordmark VISORA/DIGITAL, aplicações da marca no site, favicon, arte Open Graph e ícone do projeto — para combinar com as capturas e parecer mais futurista, sem mudar layout, textos, cores ou conteúdo de outras áreas.
+
+
+### Evidência do refinamento da logo
+Inspeção visual concluída em desktop e celular. `pnpm typecheck` e `pnpm build` passaram; favicon, símbolo e Open Graph são SVGs válidos. O ícone atualizado do projeto respondeu HTTP 200 no CDN.
