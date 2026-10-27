@@ -825,3 +825,7 @@ button:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visibl
   .hero-website-card { right: 3%; width: 62%; }
   .hero__bottom { font-size: 5px; }
 }
+
+
+/* The outer orbit follows the circular enclosure in the supplied reference. */
+.brand__orbit--ring { stroke-width: 1.25; opacity: .9; }

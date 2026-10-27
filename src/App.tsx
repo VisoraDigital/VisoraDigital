@@ -168,6 +168,7 @@ const qrPattern = [
 function BrandSymbol({ className = 'brand__symbol', decorative = false }: { className?: string; decorative?: boolean }) {
   return (
     <svg className={className} viewBox="0 0 48 44" fill="none" role={decorative ? undefined : 'img'} aria-label={decorative ? undefined : 'Símbolo V orbital'} aria-hidden={decorative || undefined}>
+      <ellipse className="brand__orbit brand__orbit--ring" cx="24" cy="22" rx="21.2" ry="19.4" />
       <path className="brand__orbit brand__orbit--primary" d="M4.5 25.8c7.8-10.7 21.6-16 36.7-10.2" />
       <path className="brand__orbit brand__orbit--secondary" d="M7.5 29.5c8.2 5.7 20.5 6.2 31.1.4" />
       <path className="brand__glyph" d="M10.8 8.5 23.2 34 38.5 8.5" />

@@ -66,3 +66,11 @@ Inspeção visual concluída em desktop e celular. `pnpm typecheck` e `pnpm buil
 
 ### Verification
 TypeScript check and production build passed. The Preview renders React children in `#root`; the production HTML retains the prerendered skip link and page content for hydration.
+
+
+## 11. Anel circular da logo
+- [x] Manter o V, o wordmark VISORA/DIGITAL, tipografia e cores atuais; mudar apenas o anel para um contorno circular/oval contínuo envolvendo o V, inspirado na imagem enviada, preservando o traço orbital diagonal existente. Aplicar a mesma marca no cabeçalho, hero, seção Sobre, favicon, Open Graph e ícone do projeto, sem alterar outras partes da página.
+
+
+### Evidência do anel circular
+Capturas do Preview conferidas em desktop e celular. `pnpm typecheck` e `pnpm build` passaram; os SVGs de favicon, marca e Open Graph são válidos. O novo ícone do projeto respondeu HTTP 200 no CDN.
