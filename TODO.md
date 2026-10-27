@@ -58,3 +58,11 @@ As capturas foram conferidas em desktop (1366×768 e 1440×1000), tablet (768×1
 
 ### Evidência do refinamento da logo
 Inspeção visual concluída em desktop e celular. `pnpm typecheck` e `pnpm build` passaram; favicon, símbolo e Open Graph são SVGs válidos. O ícone atualizado do projeto respondeu HTTP 200 no CDN.
+
+
+## 10. React hydration
+- [x] Mount the Vite development page without hydration when `#root` contains only the prerender placeholder; hydrate production HTML when server-rendered elements are present, eliminating the reported missing-`<a>` hydration mismatch while preserving production prerendering.
+
+
+### Verification
+TypeScript check and production build passed. The Preview renders React children in `#root`; the production HTML retains the prerendered skip link and page content for hydration.
