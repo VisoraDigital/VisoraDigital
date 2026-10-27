@@ -74,3 +74,15 @@ TypeScript check and production build passed. The Preview renders React children
 
 ### Evidência do anel circular
 Capturas do Preview conferidas em desktop e celular. `pnpm typecheck` e `pnpm build` passaram; os SVGs de favicon, marca e Open Graph são válidos. O novo ícone do projeto respondeu HTTP 200 no CDN.
+
+
+## 12. Animação da mensagem na seção Sobre
+- [x] Animar com um brilho suave apenas a mensagem “VISIBILIDADE COM PROPÓSITO” no visual central da seção Sobre a Visora. Manter símbolo, wordmark, o restante da página, o layout e o conteúdo estáticos; desativar a animação quando `prefers-reduced-motion: reduce` estiver ativo.
+
+
+### Atualização de escopo
+A orientação mais recente substitui a ideia de animar a logo: manter V e wordmark estáticos e animar apenas “VISIBILIDADE COM PROPÓSITO” no visual da seção Sobre, respeitando movimento reduzido.
+
+
+### Evidência da animação em Sobre
+`pnpm typecheck` e `pnpm build` passaram. No Preview, a frase usa a animação `about-purpose-shimmer` de 9s em loop, o anel da marca não tem animação e a regra `prefers-reduced-motion` desativa o efeito.
