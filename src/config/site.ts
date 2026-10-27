@@ -1,6 +1,6 @@
-export const WHATSAPP_NUMBER = '+5549984242330';
+export const WHATSAPP_NUMBER = '';
 export const INSTAGRAM_URL = 'https://www.instagram.com/somosvisora/';
-export const PUBLIC_SITE_URL = '';
+export const PUBLIC_SITE_URL = 'https://www.visoradigital.com.br';
 export const BUSINESS_EMAIL = '';
 
 export const siteConfig = {
